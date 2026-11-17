@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f0ece9"/>
+      <stop offset="1" stop-color="#f8e6dc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1110" cy="90" r="300" fill="#f5d8c9" opacity=".65"/>
+  <circle cx="1100" cy="535" r="225" fill="#eeb18e" opacity=".3"/>
+  <rect x="64" y="64" width="1072" height="502" rx="32" fill="#fffaf7" stroke="#e2d7cf" stroke-width="2"/>
+  <rect x="96" y="107" width="14" height="38" rx="7" fill="#bc5232"/>
+  <text x="126" y="139" fill="#bc5232" font-family="Arial, PingFang SC, sans-serif" font-size="34" font-weight="700">PingCode AI</text>
+  <text x="96" y="308" fill="#2b211c" font-family="PingFang SC, Arial, sans-serif" font-size="86" font-weight="700">AI工具导航</text>
+  <text x="100" y="380" fill="#7a685d" font-family="PingFang SC, Arial, sans-serif" font-size="30">精选好用的AI工具集</text>
+  <path d="M100 440H1100" stroke="#e2d7cf" stroke-width="2"/>
+  <text x="100" y="505" fill="#7a685d" font-family="PingFang SC, Arial, sans-serif" font-size="24">智能编程 · 对话助手 · 图像生成 · 写作翻译 · 办公效率</text>
+</svg>

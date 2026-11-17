@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PingCode AI工具导航 - 精选好用的AI工具集</title>
+    <meta name="description" content="PingCode AI工具导航，汇集国内外实用AI工具，涵盖智能编程、对话助手、图像与视频生成、写作翻译和办公效率等场景。查看工具简介，快速找到适合你的工具并直达使用。" />
+    <link rel="canonical" href="https://nav.pingcode.ai/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="PingCode AI工具导航" />
+    <meta property="og:title" content="PingCode AI工具导航 - 精选好用的AI工具集" />
+    <meta property="og:description" content="PingCode AI工具导航，汇集国内外实用AI工具，涵盖智能编程、对话助手、图像与视频生成、写作翻译和办公效率等场景。查看工具简介，快速找到适合你的工具并直达使用。" />
+    <meta property="og:url" content="https://nav.pingcode.ai/" />
+    <meta property="og:image" content="https://nav.pingcode.ai/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // 首屏前定主题，避免亮色用户看到一帧深色闪烁
+      try {
+        var saved = localStorage.getItem("pingcode-nav-theme");
+        document.documentElement.dataset.theme =
+          saved === "light" || saved === "dark"
+            ? saved
+            : matchMedia("(prefers-color-scheme: light)").matches
+              ? "light"
+              : "dark";
+      } catch (e) {
+        document.documentElement.dataset.theme = "dark";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

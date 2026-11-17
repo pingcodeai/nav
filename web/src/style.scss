@@ -1,0 +1,209 @@
+/* 配色取自原型「搜索中心」方案：暖棕色调，深浅两套由 html[data-theme] 切换 */
+/* 颜色存 RGB 通道值，便于 UnoCSS 注入透明度（如 bg-accent/10） */
+:root {
+  color-scheme: dark;
+
+  --color-background: 21 19 17;
+  --color-surface: 32 29 26;
+  --color-line: 56 49 44;
+  --color-ink: 240 236 233;
+  --color-muted: 185 173 164;
+  --color-accent: 238 72 29;
+
+  /* 原型中的辅助色 */
+  --color-peach: 238 177 142;
+  --color-terracotta: 188 82 50;
+  --color-active-bg: 50 34 24;
+  --color-active-line: 103 64 43;
+  --color-hover-bg: 40 34 29;
+  --color-hover-line: 120 81 60;
+  --color-header-bg: 27 23 20;
+  --color-panel: 37 29 24;
+  --color-panel-line: 80 56 44;
+
+  /* 搜索框单独一组，深浅两版底色差异大 */
+  --color-field-bg: 51 45 40;
+  --color-field-line: 77 64 55;
+
+  /* 福利按钮高光扫过的颜色 */
+  --promo-sweep: rgb(255 255 255 / 28%);
+
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
+}
+
+/* 明亮版：取自热力图色阶 #f0ece9 / #f5d8c9 / #eeb18e / #df8556 / #bc5232 */
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --color-background: 240 236 233;
+  --color-surface: 250 247 245;
+  --color-line: 226 215 207;
+  --color-ink: 43 33 28;
+  --color-muted: 122 104 93;
+  --color-accent: 188 82 50;
+
+  --color-peach: 165 65 36;
+  --color-terracotta: 223 133 86;
+  --color-active-bg: 245 216 201;
+  --color-active-line: 238 177 142;
+  --color-hover-bg: 247 233 225;
+  --color-hover-line: 223 133 86;
+  --color-header-bg: 246 242 239;
+  --color-panel: 250 247 245;
+  --color-panel-line: 238 177 142;
+
+  --color-field-bg: 255 253 252;
+  --color-field-line: 226 215 207;
+
+  --promo-sweep: rgb(255 255 255 / 70%);
+}
+
+/* 截取新旧画面时，阻止搜索框等控件自己再做一次颜色动画。 */
+html.theme-capture,
+html.theme-capture :where(*, *::before, *::after, *::placeholder) {
+  transition: none !important;
+}
+
+/* 保留旧画面，让完整的新画面一次淡入，避免局部控件各自闪动。 */
+::view-transition-old(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  animation: theme-fade-in 300ms ease-in-out both;
+  mix-blend-mode: normal;
+  z-index: 2;
+}
+
+@keyframes theme-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100svh;
+  font: 15px/1.6 -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: rgb(var(--color-ink));
+  background-color: rgb(var(--color-background));
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+svg {
+  display: block;
+}
+
+a:focus-visible,
+button:focus-visible,
+h2:focus-visible {
+  outline: 2px solid rgb(var(--color-accent));
+  outline-offset: 5px;
+}
+
+.wrap {
+  --page-gutter: clamp(14px, 3vw, 32px);
+  width: min(1300px, calc(100% - 2 * var(--page-gutter)));
+  margin-inline: auto;
+}
+
+/* JavaScript 尚未加载时，构建进 HTML 的站点目录仍可直接阅读。 */
+.seo-prerender {
+  padding-block: 32px 56px;
+}
+
+.seo-prerender > h1,
+.seo-prerender > p {
+  text-align: center;
+}
+
+.seo-prerender > h1 {
+  font-size: clamp(32px, 4vw, 48px);
+}
+
+.seo-prerender > p {
+  margin-block: 8px 28px;
+  color: rgb(var(--color-muted));
+}
+
+.seo-prerender nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+  color: rgb(var(--color-muted));
+}
+
+.seo-prerender section {
+  margin-bottom: 28px;
+}
+
+.seo-prerender h2 {
+  margin-bottom: 12px;
+  font-size: 19px;
+}
+
+.seo-prerender ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 14px;
+}
+
+.seo-prerender li a {
+  display: block;
+  min-height: 100px;
+  padding: 12px;
+  border: 1px solid rgb(var(--color-line));
+  border-radius: 8px;
+  background: rgb(var(--color-surface));
+}
+
+.seo-prerender h3 {
+  margin-bottom: 4px;
+  font-size: 15px;
+}
+
+.seo-prerender li p {
+  color: rgb(var(--color-muted));
+  font-size: 13px;
+}
