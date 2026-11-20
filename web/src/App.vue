@@ -273,7 +273,7 @@ function selectEngine(key: string) {
             </button>
             <ul
               v-show="engineOpen"
-              class="absolute left-0 top-full z-20 m-0 mt-2 min-w-[160px] list-none rounded-xl border border-field-line bg-field-bg p-1 text-left shadow-xl"
+              class="absolute left-0 top-full z-20 m-0 mt-2 min-w-[100px] list-none rounded-xl border border-field-line bg-field-bg p-1 text-left shadow-xl"
               role="listbox"
             >
               <li v-for="engine in data.meta.engines" :key="engine.key">
