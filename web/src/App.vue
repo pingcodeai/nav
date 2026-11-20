@@ -144,8 +144,27 @@ function submitSearch() {
   window.open(engine.url + encodeURIComponent(query), "_blank", "noopener");
 }
 
+const engineOpen = ref(false);
+const enginePanel = ref<HTMLElement>();
+
+const currentEngineName = computed(
+  () => data.value.meta.engines.find(item => item.key === currentEngine.value)?.name ?? "引擎"
+);
+
+/** 点击面板外部时收起引擎列表 */
+function onDocumentPointerDown(event: PointerEvent) {
+  if (!engineOpen.value) return;
+  const target = event.target as Node | null;
+  if (target && enginePanel.value?.contains(target)) return;
+  engineOpen.value = false;
+}
+
+onMounted(() => document.addEventListener("pointerdown", onDocumentPointerDown));
+onUnmounted(() => document.removeEventListener("pointerdown", onDocumentPointerDown));
+
 function selectEngine(key: string) {
   currentEngine.value = key;
+  engineOpen.value = false;
   searchInput.value?.focus({ preventScroll: true });
 }
 </script>
@@ -253,6 +272,82 @@ function selectEngine(key: string) {
    class="search-control flex h-11 w-[min(100%,500px)] min-w-0 items-center rounded-full border border-field-line bg-field-bg transition-colors duration-300 focus-within:border-accent [grid-area:search]"
    role="search"
         >
+          <div
+            v-if="data.meta.engines.length > 0"
+            ref="enginePanel"
+            class="relative flex h-full flex-none items-center"
+          >
+            <button
+              type="button"
+              class="flex h-full items-center gap-1 pl-4 pr-2 text-[13px] font-600 text-ink"
+              aria-label="搜索引擎"
+              aria-haspopup="listbox"
+              :aria-expanded="engineOpen"
+              @click="engineOpen = !engineOpen"
+            >
+              {{ currentEngineName }}
+              <svg
+                class="text-ink/60 transition-transform duration-150"
+                :class="{ 'rotate-180': engineOpen }"
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+            <ul
+              v-show="engineOpen"
+              class="absolute left-0 top-full z-20 m-0 mt-2 min-w-[160px] list-none rounded-xl border border-field-line bg-field-bg p-1 text-left shadow-xl"
+              role="listbox"
+            >
+              <li v-for="engine in data.meta.engines" :key="engine.key">
+                <button
+                  type="button"
+                  role="option"
+                  class="flex w-full items-center justify-between gap-4 rounded-lg px-3 py-2 text-left text-[13px] transition-colors duration-150 hover:bg-ink/6"
+                  :class="engine.key === currentEngine ? 'text-accent' : 'text-ink'"
+                  :aria-selected="engine.key === currentEngine"
+                  @click="selectEngine(engine.key)"
+                >
+                  {{ engine.name }}
+                  <svg
+                    v-if="engine.key === currentEngine"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="m5 12.5 4.5 4.5L19 7" />
+                  </svg>
+                </button>
+              </li>
+            </ul>
+            <span class="ml-1 h-5 w-px bg-field-line" aria-hidden="true" />
+          </div>
+
+          <input
+     id="resource-search"
+            ref="searchInput"
+     v-model="keyword"
+     type="search"
+     class="h-full min-w-0 flex-1 border-0 bg-transparent p-0 pl-3 text-ink placeholder:text-ink/75 focus:outline-none"
+     :placeholder="searchPlaceholder"
+     autocomplete="off"
+     @keydown="onSearchKeydown"
+          />
+
           <button
      type="button"
      class="grid h-10 w-10 flex-none place-items-center rounded-full text-ink/75"
@@ -273,42 +368,7 @@ aria-hidden="true"
        <path d="m16 16 4.5 4.5" />
      </svg>
           </button>
-
-          <input
-     id="resource-search"
-            ref="searchInput"
-     v-model="keyword"
-     type="search"
-     class="h-full min-w-0 flex-1 border-0 bg-transparent p-0 pr-[13px] text-ink placeholder:text-ink/75 focus:outline-none"
-     :placeholder="searchPlaceholder"
-     autocomplete="off"
-     @keydown="onSearchKeydown"
-          />
     </div>
-
- <div
-   v-if="data.meta.engines.length > 0"
-   class="engine-tabs flex flex-wrap items-center gap-2 [grid-area:engines]"
-   role="tablist"
-   aria-label="搜索引擎"
- >
-   <button
-     v-for="engine in data.meta.engines"
-     :key="engine.key"
-     type="button"
-     role="tab"
-     class="rounded-full border px-3 py-1 text-[12px] font-600 transition-colors duration-150"
-     :class="
-       engine.key === currentEngine
-  ? 'border-active-line bg-active-bg text-peach'
-         : 'border-line bg-surface text-muted hover:text-ink'
-     "
-     :aria-selected="engine.key === currentEngine"
-     @click="selectEngine(engine.key)"
-   >
-     {{ engine.name }}
-   </button>
- </div>
       </div>
     </section>
 
@@ -486,8 +546,7 @@ aria-hidden="true"
   grid-template-areas:
     "title"
     "description"
-    "search"
-    "engines";
+    "search";
   justify-items: center;
   align-items: center;
   text-align: center;
@@ -496,11 +555,6 @@ aria-hidden="true"
 
 .search-control {
   margin-top: 16px;
-}
-
-.engine-tabs {
-  margin-top: 12px;
-  justify-content: center;
 }
 
 .directory {

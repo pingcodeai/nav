@@ -190,19 +190,6 @@ const showImage = computed(() => Boolean(icon.value) && !failed.value);
   background-color: rgb(var(--color-accent) / 15%);
 }
 
-/* 左上角 L 形折角装饰，原型标志性细节 */
-.card::before {
-  content: "";
-  position: absolute;
-  inset: -1px auto auto -1px;
-  width: 10px;
-  height: 10px;
-  border-top: 1px solid rgb(var(--color-terracotta));
-  border-left: 1px solid rgb(var(--color-terracotta));
-  border-top-left-radius: 8px;
-  pointer-events: none;
-}
-
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   .card-content {
     transition: transform 200ms;
