@@ -207,3 +207,24 @@ h2:focus-visible {
   color: rgb(var(--color-muted));
   font-size: 13px;
 }
+
+.seo-prerender-footer {
+  display: grid;
+  gap: 12px;
+  padding-block: 32px;
+  border-top: 1px solid rgb(var(--color-line));
+  color: rgb(var(--color-muted));
+  font-size: 14px;
+}
+
+.seo-prerender-footer h2 {
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.seo-prerender-footer ul,
+.seo-prerender-footer p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}

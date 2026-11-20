@@ -4,6 +4,13 @@ import { resolve } from "path";
 import unoCss from "unocss/vite";
 import AutoImport from "unplugin-auto-import/vite";
 import { defineConfig } from "vite";
+import {
+  footerCopyright,
+  footerEmail,
+  footerGroups,
+  footerSlogan,
+  footerSocials
+} from "./src/footer";
 
 interface SeoData {
   meta: { description: string; refTemplate: string };
@@ -41,7 +48,19 @@ function renderSeoContent() {
     return `<section id="cat-${escapeHtml(group.key)}"><h2>${escapeHtml(group.name)}</h2><ul>${cards}</ul></section>`;
   }).join("");
 
-  return `<main class="seo-prerender wrap"><h1>AI工具导航</h1><p>${escapeHtml(data.meta.description)}</p><nav aria-label="站点分类">${navigation}</nav>${sections}</main>`;
+  return `<main class="seo-prerender wrap"><h1>AI工具导航</h1><p>${escapeHtml(data.meta.description)}</p><nav aria-label="站点分类">${navigation}</nav>${sections}</main>${renderSeoFooter()}`;
+}
+
+function renderSeoFooter() {
+  const link = (href: string, label: string, extra = "") =>
+    `<a href="${escapeHtml(href)}"${extra}>${escapeHtml(label)}</a>`;
+  const external = ' target="_blank" rel="noopener"';
+  const groups = footerGroups.map(group =>
+    `<nav><h2>${escapeHtml(group.title)}</h2><ul>${group.links.map(item => `<li>${link(item.href, item.label, external)}</li>`).join("")}</ul></nav>`
+  ).join("");
+  const socials = footerSocials.map(item => link(item.href, item.label, external)).join("");
+
+  return `<footer class="seo-prerender-footer wrap"><p>${escapeHtml(footerSlogan)}</p><p>需要帮助？${link(`mailto:${footerEmail}`, footerEmail)}</p><p>${socials}</p>${groups}<p>${escapeHtml(footerCopyright)}</p></footer>`;
 }
 
 export default defineConfig({
