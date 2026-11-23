@@ -4,9 +4,21 @@
     "description": "精选国内外热门 AI 工具，按场景分类，点击直达",
     "refTemplate": "",
     "engines": [
-      { "key": "google", "name": "Google", "url": "https://www.google.com/search?q=" },
-      { "key": "baidu", "name": "百度", "url": "https://www.baidu.com/s?wd=" },
-      { "key": "bing", "name": "Bing", "url": "https://www.bing.com/search?q=" }
+      {
+        "key": "google",
+        "name": "Google",
+        "url": "https://www.google.com/search?q="
+      },
+      {
+        "key": "baidu",
+        "name": "百度",
+        "url": "https://www.baidu.com/s?wd="
+      },
+      {
+        "key": "bing",
+        "name": "Bing",
+        "url": "https://www.bing.com/search?q="
+      }
     ]
   },
   "categories": [
@@ -14,11 +26,6 @@
       "key": "coding",
       "name": "智能编程",
       "icon": "code"
-    },
-    {
-      "key": "chat",
-      "name": "对话助手",
-      "icon": "message-circle"
     },
     {
       "key": "agent",
@@ -31,9 +38,14 @@
       "icon": "puzzle"
     },
     {
-      "key": "platform",
-      "name": "模型部署",
-      "icon": "layers"
+      "key": "chat",
+      "name": "对话助手",
+      "icon": "message-circle"
+    },
+    {
+      "key": "search",
+      "name": "智能搜索",
+      "icon": "search"
     },
     {
       "key": "prompt",
@@ -41,9 +53,9 @@
       "icon": "sparkles"
     },
     {
-      "key": "search",
-      "name": "智能搜索",
-      "icon": "search"
+      "key": "platform",
+      "name": "模型部署",
+      "icon": "layers"
     },
     {
       "key": "image",
@@ -61,6 +73,21 @@
       "icon": "music"
     },
     {
+      "key": "design",
+      "name": "界面设计",
+      "icon": "palette"
+    },
+    {
+      "key": "three-d",
+      "name": "三维建模",
+      "icon": "cube"
+    },
+    {
+      "key": "avatar",
+      "name": "数字人像",
+      "icon": "user-video"
+    },
+    {
       "key": "writing",
       "name": "写作翻译",
       "icon": "pen"
@@ -71,9 +98,14 @@
       "icon": "briefcase"
     },
     {
-      "key": "nav",
-      "name": "资源导航",
-      "icon": "compass"
+      "key": "learn",
+      "name": "学习课程",
+      "icon": "graduation"
+    },
+    {
+      "key": "detect",
+      "name": "内容检测",
+      "icon": "shield-check"
     }
   ],
   "sites": [
@@ -100,7 +132,7 @@
     {
       "slug": "claude-code",
       "name": "Claude Code",
-      "url": "https://www.anthropic.com/claude-code",
+      "url": "https://claude.com/product/claude-code",
       "category": "coding",
       "description": "终端里的编码 Agent！命令行直接读写仓库、跑任务，Anthropic 官方",
       "region": "overseas",
@@ -116,16 +148,6 @@
       "region": "overseas",
       "apiReady": true,
       "tags": ["IDE", "字节跳动", "整项目生成", "自定义模型", "第三方 API"]
-    },
-    {
-      "slug": "lingma",
-      "name": "通义灵码",
-      "url": "https://lingma.aliyun.com/",
-      "category": "coding",
-      "description": "国内用得最广的编码助手！补全、测试生成、仓库问答一条龙",
-      "region": "china",
-      "apiReady": false,
-      "tags": ["阿里云", "IDE 插件", "代码补全", "单元测试"]
     },
     {
       "slug": "cline",
@@ -166,16 +188,6 @@
       "region": "overseas",
       "apiReady": true,
       "tags": ["命令行", "开源", "Git", "CLI"]
-    },
-    {
-      "slug": "continue",
-      "name": "Continue",
-      "url": "https://continue.dev/",
-      "category": "coding",
-      "description": "企业自建首选！开源 IDE 助手，模型与团队规则全自定义",
-      "region": "overseas",
-      "apiReady": true,
-      "tags": ["开源", "私有化", "IDE 插件", "JetBrains"]
     },
     {
       "slug": "comate",
@@ -228,16 +240,6 @@
       "tags": ["阿里巴巴", "IDE", "Agent", "仓库理解"]
     },
     {
-      "slug": "roo-code",
-      "name": "Roo Code",
-      "url": "https://roocode.com/",
-      "category": "coding",
-      "description": "开源 Agent 插件里最能折腾的！多角色模式随意切换",
-      "region": "overseas",
-      "apiReady": true,
-      "tags": ["开源", "VS Code", "Agent", "多模式"]
-    },
-    {
       "slug": "gemini-cli",
       "name": "Gemini CLI",
       "url": "https://github.com/google-gemini/gemini-cli",
@@ -268,166 +270,6 @@
       "tags": ["全栈生成", "WebContainer", "建站", "Vibe Coding"]
     },
     {
-      "slug": "chatgpt",
-      "name": "ChatGPT",
-      "url": "https://chatgpt.com/",
-      "category": "chat",
-      "description": "AI 助手的默认选项！联网、读文件、深度研究都在一个框里",
-      "region": "overseas",
-      "apiReady": false,
-      "tags": ["OpenAI", "通用助手", "联网搜索", "深度研究"]
-    },
-    {
-      "slug": "doubao",
-      "name": "豆包",
-      "url": "https://www.doubao.com/chat/",
-      "category": "chat",
-      "description": "国内用户量第一的 AI 助手！语音通话、生图、翻译全免费",
-      "region": "china",
-      "apiReady": false,
-      "tags": ["字节跳动", "语音通话", "免费", "多模态"]
-    },
-    {
-      "slug": "deepseek",
-      "name": "DeepSeek",
-      "url": "https://chat.deepseek.com/",
-      "category": "chat",
-      "description": "性价比最高的国产模型！推理和代码能力对标头部，API 极便宜",
-      "region": "china",
-      "apiReady": false,
-      "tags": ["开源", "推理模型", "低价 API", "深度求索"]
-    },
-    {
-      "slug": "gemini",
-      "name": "Gemini",
-      "url": "https://gemini.google.com/",
-      "category": "chat",
-      "description": "最会用搜索的助手！多模态能力强，直通 Google 全家桶",
-      "region": "overseas",
-      "apiReady": false,
-      "tags": ["Google", "多模态", "Workspace"]
-    },
-    {
-      "slug": "claude",
-      "name": "Claude",
-      "url": "https://claude.ai/",
-      "category": "chat",
-      "description": "写代码和读长文最强的助手！Artifacts 能直接跑出可交互页面",
-      "region": "overseas",
-      "apiReady": false,
-      "tags": ["Anthropic", "长文本", "代码", "Artifacts"]
-    },
-    {
-      "slug": "kimi",
-      "name": "Kimi",
-      "url": "https://www.kimi.com/",
-      "category": "chat",
-      "description": "扔长文档就找它！超长上下文加深度思考模式，月之暗面出品",
-      "region": "china",
-      "apiReady": false,
-      "tags": ["长文本", "文档解析", "月之暗面", "推理模型"]
-    },
-    {
-      "slug": "yuanbao",
-      "name": "腾讯元宝",
-      "url": "https://yuanbao.tencent.com/",
-      "category": "chat",
-      "description": "唯一能搜公众号的助手！还能在混元与 DeepSeek 间自由切换",
-      "region": "china",
-      "apiReady": false,
-      "tags": ["腾讯", "公众号", "多模型切换", "混元"]
-    },
-    {
-      "slug": "tongyi",
-      "name": "通义",
-      "url": "https://www.tongyi.com/",
-      "category": "chat",
-      "description": "阿里的全能助手！文档解读、会议记录、智能体广场都在里面",
-      "region": "china",
-      "apiReady": false,
-      "tags": ["阿里云", "会议纪要", "智能体", "文档"]
-    },
-    {
-      "slug": "grok",
-      "name": "Grok",
-      "url": "https://grok.com/",
-      "category": "chat",
-      "description": "最懂热点的助手！能实时翻 X 平台内容，xAI 出品",
-      "region": "overseas",
-      "apiReady": false,
-      "tags": ["xAI", "实时检索", "推特", "马斯克"]
-    },
-    {
-      "slug": "chatglm",
-      "name": "智谱清言",
-      "url": "https://chatglm.cn/",
-      "category": "chat",
-      "description": "能跑代码的国产助手！内置沙箱执行，还可自建智能体",
-      "region": "china",
-      "apiReady": false,
-      "tags": ["智谱", "代码沙箱", "智能体", "GLM"]
-    },
-    {
-      "slug": "cherry-studio",
-      "name": "Cherry Studio",
-      "url": "https://www.cherry-ai.com/",
-      "category": "chat",
-      "description": "填 API 就能用的桌面客户端！聚合多家模型，支持本地知识库",
-      "region": "china",
-      "apiReady": true,
-      "tags": ["开源", "桌面客户端", "知识库", "多模型"]
-    },
-    {
-      "slug": "chatbox",
-      "name": "ChatBox",
-      "url": "https://chatboxai.app/",
-      "category": "chat",
-      "description": "最省心的 API 聊天客户端！填地址就能用，三端都有",
-      "region": "china",
-      "apiReady": true,
-      "tags": ["桌面客户端", "自定义 API", "跨平台", "开源"]
-    },
-    {
-      "slug": "lobechat",
-      "name": "LobeChat",
-      "url": "https://lobechat.com/",
-      "category": "chat",
-      "description": "最好看的自部署聊天框架！一键上线，插件与多供应商全支持",
-      "region": "overseas",
-      "apiReady": true,
-      "tags": ["开源", "自部署", "插件", "多模型"]
-    },
-    {
-      "slug": "qwen-chat",
-      "name": "Qwen Chat",
-      "url": "https://chat.qwen.ai/",
-      "category": "chat",
-      "description": "通义千问的海外版入口！最新模型随便挑，长文档也扛得住",
-      "region": "overseas",
-      "apiReady": false,
-      "tags": ["阿里巴巴", "通义千问", "多模型", "长文本"]
-    },
-    {
-      "slug": "ima",
-      "name": "腾讯 ima",
-      "url": "https://ima.qq.com/",
-      "category": "chat",
-      "description": "带知识库的问答助手！能直接搜公众号内容，资料党真爱",
-      "region": "china",
-      "apiReady": false,
-      "tags": ["腾讯", "知识库", "微信公众号", "笔记"]
-    },
-    {
-      "slug": "open-webui",
-      "name": "Open WebUI",
-      "url": "https://openwebui.com/",
-      "category": "chat",
-      "description": "自建 AI 聊天站的首选！配 Ollama 开箱可用，全开源",
-      "region": "overseas",
-      "apiReady": true,
-      "tags": ["开源", "自部署", "Ollama", "本地模型"]
-    },
-    {
       "slug": "manus",
       "name": "Manus",
       "url": "https://manus.im/",
@@ -456,16 +298,6 @@
       "region": "overseas",
       "apiReady": true,
       "tags": ["开源", "自动化", "工作流", "自托管", "集成"]
-    },
-    {
-      "slug": "coze",
-      "name": "扣子 Coze",
-      "url": "https://www.coze.cn/",
-      "category": "agent",
-      "description": "零代码做 Bot 最快的平台！搭完一键发到飞书、微信等渠道",
-      "region": "china",
-      "apiReady": false,
-      "tags": ["字节跳动", "零代码", "智能体", "多端发布"]
     },
     {
       "slug": "zapier",
@@ -500,7 +332,7 @@
     {
       "slug": "fastgpt",
       "name": "FastGPT",
-      "url": "https://tryfastgpt.ai/",
+      "url": "https://fastgpt.io/",
       "category": "agent",
       "description": "专注知识库问答的开源方案！可视化编排，私有化部署友好",
       "region": "china",
@@ -516,26 +348,6 @@
       "region": "overseas",
       "apiReady": true,
       "tags": ["开源", "可视化编排", "LangChain", "API"]
-    },
-    {
-      "slug": "flowise",
-      "name": "Flowise",
-      "url": "https://flowiseai.com/",
-      "category": "agent",
-      "description": "最快出 Agent 原型的低代码平台！开源可自建，组件齐全",
-      "region": "overseas",
-      "apiReady": true,
-      "tags": ["开源", "低代码", "可视化编排", "自部署"]
-    },
-    {
-      "slug": "yuanqi",
-      "name": "腾讯元器",
-      "url": "https://yuanqi.tencent.com/",
-      "category": "agent",
-      "description": "腾讯的智能体工厂！插件、知识库、工作流配好即可发布",
-      "region": "china",
-      "apiReady": false,
-      "tags": ["腾讯", "智能体", "插件", "知识库"]
     },
     {
       "slug": "langgraph",
@@ -566,86 +378,6 @@
       "region": "china",
       "apiReady": true,
       "tags": ["开源", "RAG", "知识库", "文档解析"]
-    },
-    {
-      "slug": "promptingguide",
-      "name": "提示工程指南",
-      "url": "https://www.promptingguide.ai/zh",
-      "category": "prompt",
-      "description": "最系统的提示词教程！从零讲到思维链，有完整中文版",
-      "region": "overseas",
-      "apiReady": false,
-      "tags": ["教程", "中文", "思维链", "开源", "Prompt Engineering"]
-    },
-    {
-      "slug": "prompts-chat",
-      "name": "Awesome ChatGPT Prompts",
-      "url": "https://prompts.chat/",
-      "category": "prompt",
-      "description": "Star 最多的角色提示词合集！上百个「扮演 XX」模板随取随用",
-      "region": "overseas",
-      "apiReady": false,
-      "tags": ["开源", "角色扮演", "提示词库", "GitHub"]
-    },
-    {
-      "slug": "anthropic-prompt-library",
-      "name": "Anthropic 提示词库",
-      "url": "https://docs.anthropic.com/en/resources/prompt-library/library",
-      "category": "prompt",
-      "description": "官方写的提示词范例！按任务分好类，可直接抄进自己的应用",
-      "region": "overseas",
-      "apiReady": false,
-      "tags": ["Anthropic", "提示词库", "官方", "模板"]
-    },
-    {
-      "slug": "learnprompting",
-      "name": "Learn Prompting",
-      "url": "https://learnprompting.org/",
-      "category": "prompt",
-      "description": "最完整的免费提示词课程！从基础到对抗注入，带练习",
-      "region": "overseas",
-      "apiReady": false,
-      "tags": ["教程", "免费", "课程", "提示词注入"]
-    },
-    {
-      "slug": "prompthero",
-      "name": "PromptHero",
-      "url": "https://prompthero.com/",
-      "category": "prompt",
-      "description": "看图找咒语！按出图效果检索 Midjourney 与 SD 提示词",
-      "region": "overseas",
-      "apiReady": false,
-      "tags": ["绘画提示词", "Midjourney", "Stable Diffusion", "灵感"]
-    },
-    {
-      "slug": "promptbase",
-      "name": "PromptBase",
-      "url": "https://promptbase.com/",
-      "category": "prompt",
-      "description": "提示词交易市场！买现成的也能把自己的挂上去卖",
-      "region": "overseas",
-      "apiReady": false,
-      "tags": ["提示词市场", "交易", "绘画提示词"]
-    },
-    {
-      "slug": "langgpt",
-      "name": "LangGPT 结构化提示词",
-      "url": "https://github.com/langgptai/LangGPT",
-      "category": "prompt",
-      "description": "中文圈最火的提示词写法！按模板填空就能写出稳定提示",
-      "region": "china",
-      "apiReady": false,
-      "tags": ["结构化提示词", "中文", "开源", "模板"]
-    },
-    {
-      "slug": "aishort",
-      "name": "AiShort 快捷指令",
-      "url": "https://www.aishort.top/",
-      "category": "prompt",
-      "description": "中文提示词随取随用！按场景分好类，一键复制进对话框",
-      "region": "china",
-      "apiReady": false,
-      "tags": ["中文提示词", "快捷指令", "开源", "场景分类"]
     },
     {
       "slug": "anthropics-skills",
@@ -738,16 +470,6 @@
       "tags": ["MCP", "目录", "服务器", "导航"]
     },
     {
-      "slug": "smithery",
-      "name": "Smithery",
-      "url": "https://smithery.ai/",
-      "category": "skill",
-      "description": "MCP 的应用商店！一条命令装进客户端，还能托管托给它跑",
-      "region": "overseas",
-      "apiReady": false,
-      "tags": ["MCP", "一键安装", "托管", "注册中心"]
-    },
-    {
       "slug": "cursor-directory",
       "name": "Cursor Directory",
       "url": "https://cursor.directory/",
@@ -758,154 +480,164 @@
       "tags": ["Cursor", "Rules", "MCP", "规则文件", "模板"]
     },
     {
-      "slug": "huggingface",
-      "name": "Hugging Face",
-      "url": "https://huggingface.co/",
-      "category": "platform",
-      "description": "全球最大的开源模型社区！模型、数据集加 Spaces 在线试玩",
+      "slug": "chatgpt",
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com/",
+      "category": "chat",
+      "description": "AI 助手的默认选项！联网、读文件、深度研究都在一个框里",
       "region": "overseas",
-      "apiReady": true,
-      "tags": ["开源模型", "社区", "数据集", "Spaces", "推理 API"]
+      "apiReady": false,
+      "tags": ["OpenAI", "通用助手", "联网搜索", "深度研究"]
     },
     {
-      "slug": "ollama",
-      "name": "Ollama",
-      "url": "https://ollama.com/",
-      "category": "platform",
-      "description": "本地跑模型最简单的方式！一条命令拉起并开好本地接口",
-      "region": "overseas",
-      "apiReady": true,
-      "tags": ["本地部署", "开源", "命令行", "本地 API"]
+      "slug": "doubao",
+      "name": "豆包",
+      "url": "https://www.doubao.com/chat/",
+      "category": "chat",
+      "description": "国内用户量第一的 AI 助手！语音通话、生图、翻译全免费",
+      "region": "china",
+      "apiReady": false,
+      "tags": ["字节跳动", "语音通话", "免费", "多模态"]
     },
     {
-      "slug": "modelscope",
-      "name": "魔搭 ModelScope",
-      "url": "https://modelscope.cn/",
-      "category": "platform",
-      "description": "国内下模型最快的社区！阿里主导，还送免费推理额度",
+      "slug": "deepseek",
+      "name": "DeepSeek",
+      "url": "https://chat.deepseek.com/",
+      "category": "chat",
+      "description": "性价比最高的国产模型！推理和代码能力对标头部，API 极便宜",
+      "region": "china",
+      "apiReady": false,
+      "tags": ["开源", "推理模型", "低价 API", "深度求索"]
+    },
+    {
+      "slug": "gemini",
+      "name": "Gemini",
+      "url": "https://gemini.google.com/",
+      "category": "chat",
+      "description": "最会用搜索的助手！多模态能力强，直通 Google 全家桶",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["Google", "多模态", "Workspace"]
+    },
+    {
+      "slug": "claude",
+      "name": "Claude",
+      "url": "https://claude.ai/",
+      "category": "chat",
+      "description": "写代码和读长文最强的助手！Artifacts 能直接跑出可交互页面",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["Anthropic", "长文本", "代码", "Artifacts"]
+    },
+    {
+      "slug": "kimi",
+      "name": "Kimi",
+      "url": "https://www.kimi.com/",
+      "category": "chat",
+      "description": "扔长文档就找它！超长上下文加深度思考模式，月之暗面出品",
+      "region": "china",
+      "apiReady": false,
+      "tags": ["长文本", "文档解析", "月之暗面", "推理模型"]
+    },
+    {
+      "slug": "yuanbao",
+      "name": "腾讯元宝",
+      "url": "https://yuanbao.tencent.com/",
+      "category": "chat",
+      "description": "唯一能搜公众号的助手！还能在混元与 DeepSeek 间自由切换",
+      "region": "china",
+      "apiReady": false,
+      "tags": ["腾讯", "公众号", "多模型切换", "混元"]
+    },
+    {
+      "slug": "tongyi",
+      "name": "通义",
+      "url": "https://www.qianwen.com/",
+      "category": "chat",
+      "description": "阿里的全能助手！文档解读、会议记录、智能体广场都在里面",
+      "region": "china",
+      "apiReady": false,
+      "tags": ["阿里云", "会议纪要", "智能体", "文档"]
+    },
+    {
+      "slug": "grok",
+      "name": "Grok",
+      "url": "https://grok.com/",
+      "category": "chat",
+      "description": "最懂热点的助手！能实时翻 X 平台内容，xAI 出品",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["xAI", "实时检索", "推特", "马斯克"]
+    },
+    {
+      "slug": "chatglm",
+      "name": "智谱清言",
+      "url": "https://chatglm.cn/",
+      "category": "chat",
+      "description": "能跑代码的国产助手！内置沙箱执行，还可自建智能体",
+      "region": "china",
+      "apiReady": false,
+      "tags": ["智谱", "代码沙箱", "智能体", "GLM"]
+    },
+    {
+      "slug": "cherry-studio",
+      "name": "Cherry Studio",
+      "url": "https://www.cherryai.com.cn/",
+      "category": "chat",
+      "description": "填 API 就能用的桌面客户端！聚合多家模型，支持本地知识库",
       "region": "china",
       "apiReady": true,
-      "tags": ["开源模型", "阿里", "中文社区", "免费额度"]
+      "tags": ["开源", "桌面客户端", "知识库", "多模型"]
     },
     {
-      "slug": "replicate",
-      "name": "Replicate",
-      "url": "https://replicate.com/",
-      "category": "platform",
-      "description": "图像视频模型最全的 API 平台！开源模型拿来即调，按次计费",
-      "region": "overseas",
-      "apiReady": true,
-      "tags": ["模型 API", "图像模型", "视频模型", "按量计费"]
-    },
-    {
-      "slug": "groq",
-      "name": "Groq",
-      "url": "https://groq.com/",
-      "category": "platform",
-      "description": "目前最快的推理服务！自研 LPU 每秒数百 token，有免费额度",
-      "region": "overseas",
-      "apiReady": true,
-      "tags": ["高速推理", "LPU", "免费额度", "开源模型"]
-    },
-    {
-      "slug": "lmstudio",
-      "name": "LM Studio",
-      "url": "https://lmstudio.ai/",
-      "category": "platform",
-      "description": "带界面的 Ollama！点点鼠标跑本地模型，自带 API 服务",
-      "region": "overseas",
-      "apiReady": true,
-      "tags": ["本地部署", "桌面端", "图形界面", "本地 API"]
-    },
-    {
-      "slug": "together-ai",
-      "name": "Together AI",
-      "url": "https://www.together.ai/",
-      "category": "platform",
-      "description": "开源模型的推理与微调云！两百多个模型共用一套接口",
-      "region": "overseas",
-      "apiReady": true,
-      "tags": ["开源模型", "推理服务", "微调", "统一接口"]
-    },
-    {
-      "slug": "bailian",
-      "name": "阿里云百炼",
-      "url": "https://bailian.console.aliyun.com/",
-      "category": "platform",
-      "description": "拿通义全系模型 API 就在这！模型服务与应用开发一体",
+      "slug": "chatbox",
+      "name": "ChatBox",
+      "url": "https://chatboxai.app/",
+      "category": "chat",
+      "description": "最省心的 API 聊天客户端！填地址就能用，三端都有",
       "region": "china",
       "apiReady": true,
-      "tags": ["阿里云", "模型 API", "通义千问", "应用开发"]
+      "tags": ["桌面客户端", "自定义 API", "跨平台", "开源"]
     },
     {
-      "slug": "volcengine-ark",
-      "name": "火山方舟",
-      "url": "https://www.volcengine.com/product/ark",
-      "category": "platform",
-      "description": "要豆包模型 API 只能来这！火山引擎出品，推理加速强",
-      "region": "china",
-      "apiReady": true,
-      "tags": ["火山引擎", "豆包", "模型 API", "字节跳动"]
-    },
-    {
-      "slug": "qianfan",
-      "name": "百度千帆",
-      "url": "https://qianfan.cloud.baidu.com/",
-      "category": "platform",
-      "description": "百度的模型全家桶入口！调用、精调、应用编排都在一个台",
-      "region": "china",
-      "apiReady": true,
-      "tags": ["百度智能云", "模型 API", "微调", "文心一言"]
-    },
-    {
-      "slug": "openrouter",
-      "name": "OpenRouter",
-      "url": "https://openrouter.ai/",
-      "category": "platform",
-      "description": "一个 key 调所有模型！价格和速度摆在明面上，想换就换",
+      "slug": "lobechat",
+      "name": "LobeChat",
+      "url": "https://lobehub.com/",
+      "category": "chat",
+      "description": "最好看的自部署聊天框架！一键上线，插件与多供应商全支持",
       "region": "overseas",
       "apiReady": true,
-      "tags": ["模型聚合", "统一 API", "多供应商", "计费透明"]
+      "tags": ["开源", "自部署", "插件", "多模型"]
     },
     {
-      "slug": "siliconflow",
-      "name": "硅基流动 SiliconFlow",
-      "url": "https://cloud.siliconflow.cn/",
-      "category": "platform",
-      "description": "国内接开源模型最省事的一家！送免费额度，兼容 OpenAI 格式",
+      "slug": "qwen-chat",
+      "name": "Qwen Chat",
+      "url": "https://chat.qwen.ai/",
+      "category": "chat",
+      "description": "通义千问的海外版入口！最新模型随便挑，长文档也扛得住",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["阿里巴巴", "通义千问", "多模型", "长文本"]
+    },
+    {
+      "slug": "ima",
+      "name": "腾讯 ima",
+      "url": "https://ima.qq.com/",
+      "category": "chat",
+      "description": "带知识库的问答助手！能直接搜公众号内容，资料党真爱",
       "region": "china",
-      "apiReady": true,
-      "tags": ["模型 API", "开源模型", "兼容 OpenAI", "免费额度"]
+      "apiReady": false,
+      "tags": ["腾讯", "知识库", "微信公众号", "笔记"]
     },
     {
-      "slug": "bigmodel",
-      "name": "智谱开放平台",
-      "url": "https://bigmodel.cn/",
-      "category": "platform",
-      "description": "GLM 系列的官方 API 入口！价格实在，编程套餐很划算",
-      "region": "china",
-      "apiReady": true,
-      "tags": ["智谱", "GLM", "模型 API", "微调"]
-    },
-    {
-      "slug": "fal-ai",
-      "name": "fal.ai",
-      "url": "https://fal.ai/",
-      "category": "platform",
-      "description": "跑图跑视频模型最快的云！接 Flux 和各类视频模型都现成",
+      "slug": "open-webui",
+      "name": "Open WebUI",
+      "url": "https://openwebui.com/",
+      "category": "chat",
+      "description": "自建 AI 聊天站的首选！配 Ollama 开箱可用，全开源",
       "region": "overseas",
       "apiReady": true,
-      "tags": ["推理云", "生图 API", "视频 API", "Flux"]
-    },
-    {
-      "slug": "fireworks-ai",
-      "name": "Fireworks AI",
-      "url": "https://fireworks.ai/",
-      "category": "platform",
-      "description": "开源模型托管又快又稳！微调和专属部署一起给你配好",
-      "region": "overseas",
-      "apiReady": true,
-      "tags": ["推理服务", "开源模型", "微调", "低延迟"]
+      "tags": ["开源", "自部署", "Ollama", "本地模型"]
     },
     {
       "slug": "perplexity",
@@ -950,7 +682,7 @@
     {
       "slug": "baidu-chat",
       "name": "百度 AI 搜索",
-      "url": "https://chat.baidu.com/",
+      "url": "https://wenxin.baidu.com/",
       "category": "search",
       "description": "百度的对话式搜索！全网内容加百家号资源一起检索",
       "region": "china",
@@ -976,16 +708,6 @@
       "region": "overseas",
       "apiReady": false,
       "tags": ["AI 搜索", "多语言", "PPT", "思维导图"]
-    },
-    {
-      "slug": "zhida",
-      "name": "知乎直答",
-      "url": "https://zhida.zhihu.com/",
-      "category": "search",
-      "description": "中文语料质量最高的 AI 搜索！搜知乎问答加专业文献",
-      "region": "china",
-      "apiReady": false,
-      "tags": ["AI 搜索", "知乎", "中文语料", "文献"]
     },
     {
       "slug": "consensus",
@@ -1038,94 +760,114 @@
       "tags": ["论文精读", "学术", "文献综述", "翻译"]
     },
     {
-      "slug": "deepl",
-      "name": "DeepL",
-      "url": "https://www.deepl.com/",
-      "category": "writing",
-      "description": "翻译质量最好的那个！整份文档丢进去也能保留排版",
+      "slug": "promptingguide",
+      "name": "提示工程指南",
+      "url": "https://www.promptingguide.ai/zh",
+      "category": "prompt",
+      "description": "最系统的提示词教程！从零讲到思维链，有完整中文版",
       "region": "overseas",
       "apiReady": false,
-      "tags": ["翻译", "文档翻译", "润色", "多语言"]
+      "tags": ["教程", "中文", "思维链", "开源", "Prompt Engineering"]
     },
     {
-      "slug": "grammarly",
-      "name": "Grammarly",
-      "url": "https://www.grammarly.com/",
-      "category": "writing",
-      "description": "写英文必装！语法、语气、全文改写一条龙，浏览器里就能用",
+      "slug": "prompts-chat",
+      "name": "Awesome ChatGPT Prompts",
+      "url": "https://prompts.chat/",
+      "category": "prompt",
+      "description": "Star 最多的角色提示词合集！上百个「扮演 XX」模板随取随用",
       "region": "overseas",
       "apiReady": false,
-      "tags": ["英文写作", "语法检查", "改写", "浏览器插件"]
+      "tags": ["开源", "角色扮演", "提示词库", "GitHub"]
     },
     {
-      "slug": "immersive-translate",
-      "name": "沉浸式翻译",
-      "url": "https://immersivetranslate.com/",
-      "category": "writing",
-      "description": "看外文网页的标配插件！双语对照，还能接自己的模型接口",
+      "slug": "learnprompting",
+      "name": "Learn Prompting",
+      "url": "https://learnprompting.org/",
+      "category": "prompt",
+      "description": "最完整的免费提示词课程！从基础到对抗注入，带练习",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["教程", "免费", "课程", "提示词注入"]
+    },
+    {
+      "slug": "prompthero",
+      "name": "PromptHero",
+      "url": "https://prompthero.com/",
+      "category": "prompt",
+      "description": "看图找咒语！按出图效果检索 Midjourney 与 SD 提示词",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["绘画提示词", "Midjourney", "Stable Diffusion", "灵感"]
+    },
+    {
+      "slug": "promptbase",
+      "name": "PromptBase",
+      "url": "https://promptbase.com/",
+      "category": "prompt",
+      "description": "提示词交易市场！买现成的也能把自己的挂上去卖",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["提示词市场", "交易", "绘画提示词"]
+    },
+    {
+      "slug": "langgpt",
+      "name": "LangGPT 结构化提示词",
+      "url": "https://github.com/langgptai/LangGPT",
+      "category": "prompt",
+      "description": "中文圈最火的提示词写法！按模板填空就能写出稳定提示",
+      "region": "china",
+      "apiReady": false,
+      "tags": ["结构化提示词", "中文", "开源", "模板"]
+    },
+    {
+      "slug": "aishort",
+      "name": "AiShort 快捷指令",
+      "url": "https://www.aishort.top/",
+      "category": "prompt",
+      "description": "中文提示词随取随用！按场景分好类，一键复制进对话框",
+      "region": "china",
+      "apiReady": false,
+      "tags": ["中文提示词", "快捷指令", "开源", "场景分类"]
+    },
+    {
+      "slug": "huggingface",
+      "name": "Hugging Face",
+      "url": "https://huggingface.co/",
+      "category": "platform",
+      "description": "全球最大的开源模型社区！模型、数据集加 Spaces 在线试玩",
+      "region": "overseas",
+      "apiReady": true,
+      "tags": ["开源模型", "社区", "数据集", "Spaces", "推理 API"]
+    },
+    {
+      "slug": "ollama",
+      "name": "Ollama",
+      "url": "https://ollama.com/",
+      "category": "platform",
+      "description": "本地跑模型最简单的方式！一条命令拉起并开好本地接口",
+      "region": "overseas",
+      "apiReady": true,
+      "tags": ["本地部署", "开源", "命令行", "本地 API"]
+    },
+    {
+      "slug": "modelscope",
+      "name": "魔搭 ModelScope",
+      "url": "https://modelscope.cn/",
+      "category": "platform",
+      "description": "国内下模型最快的社区！阿里主导，还送免费推理额度",
       "region": "china",
       "apiReady": true,
-      "tags": ["翻译", "浏览器插件", "双语对照", "自定义 API"]
+      "tags": ["开源模型", "阿里", "中文社区", "免费额度"]
     },
     {
-      "slug": "quillbot",
-      "name": "QuillBot",
-      "url": "https://quillbot.com/",
-      "category": "writing",
-      "description": "论文降重首选！改写加语法检查，顺带生成摘要与引用",
-      "region": "overseas",
-      "apiReady": false,
-      "tags": ["改写", "降重", "论文", "语法检查", "摘要"]
-    },
-    {
-      "slug": "youdao-translate",
-      "name": "有道翻译",
-      "url": "https://fanyi.youdao.com/",
-      "category": "writing",
-      "description": "最老牌的国产翻译！文档、图片、大模型翻译模式都有",
-      "region": "china",
-      "apiReady": false,
-      "tags": ["翻译", "网易有道", "图片翻译", "文档翻译"]
-    },
-    {
-      "slug": "xiezuocat",
-      "name": "秘书喵写作猫",
-      "url": "https://xiezuocat.com/",
-      "category": "writing",
-      "description": "中文写作的全能助手！纠错、改写、续写、润色都能干",
-      "region": "china",
-      "apiReady": false,
-      "tags": ["中文写作", "纠错", "改写", "润色"]
-    },
-    {
-      "slug": "jasper",
-      "name": "Jasper",
-      "url": "https://www.jasper.ai/",
-      "category": "writing",
-      "description": "营销文案的老牌选手！品牌调性设一次，全渠道文案都统一",
+      "slug": "lmstudio",
+      "name": "LM Studio",
+      "url": "https://lmstudio.ai/",
+      "category": "platform",
+      "description": "带界面的 Ollama！点点鼠标跑本地模型，自带 API 服务",
       "region": "overseas",
       "apiReady": true,
-      "tags": ["营销文案", "品牌", "内容生成", "团队协作"]
-    },
-    {
-      "slug": "copy-ai",
-      "name": "Copy.ai",
-      "url": "https://www.copy.ai/",
-      "category": "writing",
-      "description": "批量出文案就靠它！工作流跑一遍，上百条素材直接打包",
-      "region": "overseas",
-      "apiReady": true,
-      "tags": ["文案", "GTM", "工作流", "批量生成"]
-    },
-    {
-      "slug": "caiyun-translate",
-      "name": "彩云小译",
-      "url": "https://fanyi.caiyunapp.com/",
-      "category": "writing",
-      "description": "中英对照翻译很顺眼！网页和文档整篇翻，口语化也拿得准",
-      "region": "china",
-      "apiReady": true,
-      "tags": ["翻译", "双语对照", "网页翻译", "国产"]
+      "tags": ["本地部署", "桌面端", "图形界面", "本地 API"]
     },
     {
       "slug": "midjourney",
@@ -1248,16 +990,6 @@
       "tags": ["在线生图", "模型库", "换脸", "线稿上色"]
     },
     {
-      "slug": "removebg",
-      "name": "remove.bg",
-      "url": "https://www.remove.bg/",
-      "category": "image",
-      "description": "抠图最快的工具！上传就出透明底，发丝边缘也干净",
-      "region": "overseas",
-      "apiReady": true,
-      "tags": ["抠图", "去背景", "批量处理", "API"]
-    },
-    {
       "slug": "magnific",
       "name": "Magnific AI",
       "url": "https://magnific.ai/",
@@ -1266,26 +998,6 @@
       "region": "overseas",
       "apiReady": false,
       "tags": ["图像放大", "超分辨率", "细节增强", "Freepik"]
-    },
-    {
-      "slug": "meshy",
-      "name": "Meshy",
-      "url": "https://www.meshy.ai/",
-      "category": "image",
-      "description": "文字和图片直接变 3D 模型！自动展 UV 贴图，可导入引擎",
-      "region": "overseas",
-      "apiReady": true,
-      "tags": ["3D 生成", "建模", "贴图", "游戏资产"]
-    },
-    {
-      "slug": "tripo",
-      "name": "Tripo AI",
-      "url": "https://www.tripo3d.ai/",
-      "category": "image",
-      "description": "几秒出一个 3D 模型！国产 3D 生成，拓扑干净能直接用",
-      "region": "china",
-      "apiReady": true,
-      "tags": ["3D 生成", "建模", "国产", "游戏资产"]
     },
     {
       "slug": "flux",
@@ -1330,7 +1042,7 @@
     {
       "slug": "runway",
       "name": "Runway",
-      "url": "https://runwayml.com/",
+      "url": "https://runway.com/",
       "category": "video",
       "description": "最专业的 AI 视频平台！图生视频、运动笔刷与剪辑一套齐",
       "region": "overseas",
@@ -1340,7 +1052,7 @@
     {
       "slug": "kling",
       "name": "可灵 AI",
-      "url": "https://app.klingai.com/cn/",
+      "url": "https://klingai.com/app/",
       "category": "video",
       "description": "国产视频模型第一梯队！物理运动最真实，时长也最能打",
       "region": "china",
@@ -1398,16 +1110,6 @@
       "tags": ["文生视频", "特效模板", "短视频", "创意"]
     },
     {
-      "slug": "heygen",
-      "name": "HeyGen",
-      "url": "https://www.heygen.com/",
-      "category": "video",
-      "description": "做数字人口播最像的！换语种口型也能对上，可克隆形象",
-      "region": "overseas",
-      "apiReady": false,
-      "tags": ["数字人", "口型同步", "声音克隆", "视频翻译"]
-    },
-    {
       "slug": "vidu",
       "name": "Vidu",
       "url": "https://www.vidu.cn/",
@@ -1426,16 +1128,6 @@
       "region": "china",
       "apiReady": true,
       "tags": ["爱诗科技", "特效模板", "出片快", "短视频"]
-    },
-    {
-      "slug": "synthesia",
-      "name": "Synthesia",
-      "url": "https://www.synthesia.io/",
-      "category": "video",
-      "description": "企业培训视频的标配！上百个数字人形象，批量出多语种版本",
-      "region": "overseas",
-      "apiReady": false,
-      "tags": ["数字人", "企业培训", "多语种", "产品介绍"]
     },
     {
       "slug": "higgsfield",
@@ -1466,16 +1158,6 @@
       "region": "overseas",
       "apiReady": true,
       "tags": ["短视频", "切片", "字幕", "自动剪辑"]
-    },
-    {
-      "slug": "captions",
-      "name": "Captions",
-      "url": "https://www.captions.ai/",
-      "category": "video",
-      "description": "口播视频的全套工具！字幕、眼神矫正、AI 演员都现成",
-      "region": "overseas",
-      "apiReady": true,
-      "tags": ["字幕", "口播", "数字人", "短视频"]
     },
     {
       "slug": "jimeng-video",
@@ -1608,6 +1290,346 @@
       "tags": ["降噪", "会议", "转录", "实时处理"]
     },
     {
+      "slug": "figma",
+      "name": "Figma",
+      "url": "https://www.figma.com/",
+      "category": "design",
+      "description": "设计师的主战场！First Draft 一句话生成界面，Make 还能出代码",
+      "region": "overseas",
+      "apiReady": true,
+      "tags": ["UI 设计", "协作", "原型", "设计转代码"]
+    },
+    {
+      "slug": "uxpilot",
+      "name": "UX Pilot",
+      "url": "https://uxpilot.ai/",
+      "category": "design",
+      "description": "从线框到高保真一条龙！AI 批量出页面，还能直接导进 Figma",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["UI 设计", "线框图", "Figma 插件", "高保真"]
+    },
+    {
+      "slug": "mastergo",
+      "name": "MasterGo 莫高",
+      "url": "https://mastergo.com/",
+      "category": "design",
+      "description": "国内团队用得最多的在线设计工具！中文体验顺，私有化也支持",
+      "region": "china",
+      "apiReady": false,
+      "tags": ["UI 设计", "协作", "国产", "私有部署"]
+    },
+    {
+      "slug": "js-design",
+      "name": "即时设计",
+      "url": "https://js.design/",
+      "category": "design",
+      "description": "打开浏览器就能画！海量中文模板和插件，Figma 文件直接导入",
+      "region": "china",
+      "apiReady": false,
+      "tags": ["UI 设计", "模板", "国产", "在线协作"]
+    },
+    {
+      "slug": "subframe",
+      "name": "Subframe",
+      "url": "https://www.subframe.com/",
+      "category": "design",
+      "description": "画完就是生产级代码！可视化拖拽直出 React 加 Tailwind 组件",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["UI 设计", "设计转代码", "React", "Tailwind"]
+    },
+    {
+      "slug": "framer",
+      "name": "Framer",
+      "url": "https://www.framer.com/",
+      "category": "design",
+      "description": "边设计边上线！动效做得最漂亮的建站工具，一键发布域名",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["建站", "动效", "落地页", "无代码"]
+    },
+    {
+      "slug": "relume",
+      "name": "Relume",
+      "url": "https://www.relume.ai/",
+      "category": "design",
+      "description": "一句话排出整站结构！输出 Figma 和 Webflow 都能直接用的组件",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["网页设计", "组件库", "Webflow", "落地页"]
+    },
+    {
+      "slug": "uizard",
+      "name": "Uizard",
+      "url": "https://uizard.io/",
+      "category": "design",
+      "description": "截图和手绘都能变可编辑原型！不会设计的人画线框最省事",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["线框图", "原型", "截图转稿", "模板"]
+    },
+    {
+      "slug": "google-stitch",
+      "name": "Google Stitch",
+      "url": "https://stitch.google.com/",
+      "category": "design",
+      "description": "Google 出的界面生成器！描述需求出 UI，可导出 Figma 和前端代码",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["UI 生成", "谷歌", "设计转代码", "免费"]
+    },
+    {
+      "slug": "lovart",
+      "name": "Lovart",
+      "url": "https://www.lovart.ai/",
+      "category": "design",
+      "description": "会自己干活的设计 Agent！一句话出整套品牌视觉和物料",
+      "region": "china",
+      "apiReady": false,
+      "tags": ["设计 Agent", "品牌视觉", "海报", "国产"]
+    },
+    {
+      "slug": "meshy",
+      "name": "Meshy",
+      "url": "https://www.meshy.ai/",
+      "category": "three-d",
+      "description": "文字和图片直接变 3D 模型！自动展 UV 贴图，可导入引擎",
+      "region": "overseas",
+      "apiReady": true,
+      "tags": ["3D 生成", "建模", "贴图", "游戏资产"]
+    },
+    {
+      "slug": "tripo",
+      "name": "Tripo AI",
+      "url": "https://www.tripo3d.ai/",
+      "category": "three-d",
+      "description": "几秒出一个 3D 模型！国产 3D 生成，拓扑干净能直接用",
+      "region": "china",
+      "apiReady": true,
+      "tags": ["3D 生成", "建模", "国产", "游戏资产"]
+    },
+    {
+      "slug": "hunyuan-3d",
+      "name": "腾讯混元 3D",
+      "url": "https://3d.hunyuan.tencent.com/",
+      "category": "three-d",
+      "description": "免费又好用的 3D 生成！腾讯开源模型，白模和贴图一起出",
+      "region": "china",
+      "apiReady": true,
+      "tags": ["3D 生成", "开源", "腾讯", "免费"]
+    },
+    {
+      "slug": "spline",
+      "name": "Spline",
+      "url": "https://spline.design/",
+      "category": "three-d",
+      "description": "网页里做 3D 交互最省事！拖拖拽拽就能嵌到前端项目",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["3D 设计", "网页 3D", "交互", "导出代码"]
+    },
+    {
+      "slug": "rodin",
+      "name": "Rodin / Hyper3D",
+      "url": "https://hyper3d.ai/",
+      "category": "three-d",
+      "description": "细节最细的图生 3D！多视角补全，模型拓扑能直接进管线",
+      "region": "china",
+      "apiReady": true,
+      "tags": ["图生 3D", "高精度", "建模", "API"]
+    },
+    {
+      "slug": "luma-genie",
+      "name": "Luma Genie",
+      "url": "https://lumalabs.ai/genie",
+      "category": "three-d",
+      "description": "一句话出四个 3D 方案！Luma 出品，挑一个直接下载",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["文生 3D", "快速出稿", "免费试用", "建模"]
+    },
+    {
+      "slug": "kaedim",
+      "name": "Kaedim",
+      "url": "https://www.kaedim3d.com/",
+      "category": "three-d",
+      "description": "给游戏团队做的 2D 转 3D！人工质检过一遍，资产能直接用",
+      "region": "overseas",
+      "apiReady": true,
+      "tags": ["2D 转 3D", "游戏资产", "人工质检", "建模"]
+    },
+    {
+      "slug": "heygen",
+      "name": "HeyGen",
+      "url": "https://www.heygen.com/",
+      "category": "avatar",
+      "description": "做数字人口播最像的！换语种口型也能对上，可克隆形象",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["数字人", "口型同步", "声音克隆", "视频翻译"]
+    },
+    {
+      "slug": "synthesia",
+      "name": "Synthesia",
+      "url": "https://www.synthesia.io/",
+      "category": "avatar",
+      "description": "企业培训视频的标配！上百个数字人形象，批量出多语种版本",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["数字人", "企业培训", "多语种", "产品介绍"]
+    },
+    {
+      "slug": "captions",
+      "name": "Captions",
+      "url": "https://www.captions.ai/",
+      "category": "avatar",
+      "description": "口播视频的全套工具！字幕、眼神矫正、AI 演员都现成",
+      "region": "overseas",
+      "apiReady": true,
+      "tags": ["字幕", "口播", "数字人", "短视频"]
+    },
+    {
+      "slug": "d-id",
+      "name": "D-ID",
+      "url": "https://www.d-id.com/",
+      "category": "avatar",
+      "description": "一张照片就能开口说话！做实时对话数字人最成熟的一家",
+      "region": "overseas",
+      "apiReady": true,
+      "tags": ["照片说话", "实时对话", "数字人", "API"]
+    },
+    {
+      "slug": "akool",
+      "name": "Akool",
+      "url": "https://www.akool.com/",
+      "category": "avatar",
+      "description": "换脸、口播、直播一条龙！营销视频批量产出很能打",
+      "region": "overseas",
+      "apiReady": true,
+      "tags": ["数字人", "换脸", "直播", "营销视频"]
+    },
+    {
+      "slug": "dupdub",
+      "name": "DupDub 配音猴",
+      "url": "https://www.dupdub.com/",
+      "category": "avatar",
+      "description": "配音加数字人一起做！中文口播质量稳，短视频博主常用",
+      "region": "china",
+      "apiReady": true,
+      "tags": ["配音", "数字人", "国产", "短视频"]
+    },
+    {
+      "slug": "hedra",
+      "name": "Hedra",
+      "url": "https://www.hedra.com/",
+      "category": "avatar",
+      "description": "表情最自然的照片说话！情绪和头部动作都跟着语气走",
+      "region": "overseas",
+      "apiReady": true,
+      "tags": ["照片说话", "表情生成", "口型同步", "角色视频"]
+    },
+    {
+      "slug": "xiaoice",
+      "name": "小冰",
+      "url": "https://www.xiaoice.com/",
+      "category": "avatar",
+      "description": "国内数字人老牌玩家！克隆形象做直播和客服都能落地",
+      "region": "china",
+      "apiReady": true,
+      "tags": ["数字人", "直播", "克隆", "国产"]
+    },
+    {
+      "slug": "deepl",
+      "name": "DeepL",
+      "url": "https://www.deepl.com/",
+      "category": "writing",
+      "description": "翻译质量最好的那个！整份文档丢进去也能保留排版",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["翻译", "文档翻译", "润色", "多语言"]
+    },
+    {
+      "slug": "grammarly",
+      "name": "Grammarly",
+      "url": "https://www.grammarly.com/",
+      "category": "writing",
+      "description": "写英文必装！语法、语气、全文改写一条龙，浏览器里就能用",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["英文写作", "语法检查", "改写", "浏览器插件"]
+    },
+    {
+      "slug": "immersive-translate",
+      "name": "沉浸式翻译",
+      "url": "https://immersivetranslate.com/",
+      "category": "writing",
+      "description": "看外文网页的标配插件！双语对照，还能接自己的模型接口",
+      "region": "china",
+      "apiReady": true,
+      "tags": ["翻译", "浏览器插件", "双语对照", "自定义 API"]
+    },
+    {
+      "slug": "quillbot",
+      "name": "QuillBot",
+      "url": "https://quillbot.com/",
+      "category": "writing",
+      "description": "论文降重首选！改写加语法检查，顺带生成摘要与引用",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["改写", "降重", "论文", "语法检查", "摘要"]
+    },
+    {
+      "slug": "youdao-translate",
+      "name": "有道翻译",
+      "url": "https://fanyi.youdao.com/",
+      "category": "writing",
+      "description": "最老牌的国产翻译！文档、图片、大模型翻译模式都有",
+      "region": "china",
+      "apiReady": false,
+      "tags": ["翻译", "网易有道", "图片翻译", "文档翻译"]
+    },
+    {
+      "slug": "xiezuocat",
+      "name": "秘书喵写作猫",
+      "url": "https://xiezuocat.com/",
+      "category": "writing",
+      "description": "中文写作的全能助手！纠错、改写、续写、润色都能干",
+      "region": "china",
+      "apiReady": false,
+      "tags": ["中文写作", "纠错", "改写", "润色"]
+    },
+    {
+      "slug": "jasper",
+      "name": "Jasper",
+      "url": "https://www.jasper.ai/",
+      "category": "writing",
+      "description": "营销文案的老牌选手！品牌调性设一次，全渠道文案都统一",
+      "region": "overseas",
+      "apiReady": true,
+      "tags": ["营销文案", "品牌", "内容生成", "团队协作"]
+    },
+    {
+      "slug": "copy-ai",
+      "name": "Copy.ai",
+      "url": "https://www.copy.ai/",
+      "category": "writing",
+      "description": "批量出文案就靠它！工作流跑一遍，上百条素材直接打包",
+      "region": "overseas",
+      "apiReady": true,
+      "tags": ["文案", "GTM", "工作流", "批量生成"]
+    },
+    {
+      "slug": "caiyun-translate",
+      "name": "彩云小译",
+      "url": "https://fanyi.caiyunapp.com/",
+      "category": "writing",
+      "description": "中英对照翻译很顺眼！网页和文档整篇翻，口语化也拿得准",
+      "region": "china",
+      "apiReady": true,
+      "tags": ["翻译", "双语对照", "网页翻译", "国产"]
+    },
+    {
       "slug": "notion",
       "name": "Notion",
       "url": "https://www.notion.com/",
@@ -1630,7 +1652,7 @@
     {
       "slug": "notebooklm",
       "name": "NotebookLM",
-      "url": "https://notebooklm.google.com/",
+      "url": "https://notebook.google.com/",
       "category": "office",
       "description": "读资料神器！传文档就能问答，还能生成两人播客音频",
       "region": "overseas",
@@ -1680,7 +1702,7 @@
     {
       "slug": "xmind-ai",
       "name": "XMind AI",
-      "url": "https://xmind.ai/",
+      "url": "https://xmind.com/ai",
       "category": "office",
       "description": "理思路先用它！输入主题自动拆成结构化导图分支",
       "region": "china",
@@ -1748,54 +1770,124 @@
       "tags": ["白板", "开源", "画图", "原型"]
     },
     {
-      "slug": "waytoagi",
-      "name": "WayToAGI 通往 AGI 之路",
-      "url": "https://www.waytoagi.com/zh",
-      "category": "nav",
-      "description": "国内最大中文开源 AI 知识库！工具库、日更资讯、教程一站全",
-      "region": "cn",
+      "slug": "deeplearning-ai",
+      "name": "DeepLearning.AI",
+      "url": "https://www.deeplearning.ai/",
+      "category": "learn",
+      "description": "吴恩达的 AI 课堂！短课一两小时讲透一个新框架，大量免费",
+      "region": "overseas",
       "apiReady": false,
-      "tags": ["知识库", "工具导航", "社区共创", "日更资讯"]
+      "tags": ["课程", "吴恩达", "短课", "免费"]
     },
     {
-      "slug": "ai-bot",
-      "name": "AI 工具集",
-      "url": "https://ai-bot.cn/",
-      "category": "nav",
-      "description": "收录量最大的中文 AI 导航！小时级更新，15 大类随便挑",
-      "region": "cn",
+      "slug": "hf-learn",
+      "name": "Hugging Face Learn",
+      "url": "https://huggingface.co/learn",
+      "category": "learn",
+      "description": "动手派最爱的免费教程！NLP、Agent、扩散模型一路跑下来",
+      "region": "overseas",
       "apiReady": false,
-      "tags": ["工具导航", "AI 资讯", "收录量大", "分类齐全"]
+      "tags": ["教程", "实战", "开源", "免费"]
     },
     {
-      "slug": "aibase",
-      "name": "AIbase",
-      "url": "https://www.aibase.com/zh/news",
-      "category": "nav",
-      "description": "分钟级刷新的 AI 资讯流！顺带一个全球 AI 产品库",
-      "region": "cn",
+      "slug": "google-ml-edu",
+      "name": "Google 机器学习课程",
+      "url": "https://developers.google.com/machine-learning",
+      "category": "learn",
+      "description": "入门机器学习的经典路线！概念讲得清楚，配交互练习",
+      "region": "overseas",
       "apiReady": false,
-      "tags": ["AI 资讯", "产品库", "多语言", "榜单"]
+      "tags": ["机器学习", "入门", "谷歌", "免费"]
     },
     {
-      "slug": "sota-jiqizhixin",
-      "name": "SOTA! 模型社区",
-      "url": "https://sota.jiqizhixin.com/",
-      "category": "nav",
-      "description": "机器之心出品！按任务找模型和开源项目，带实测评级",
-      "region": "cn",
+      "slug": "microsoft-learn-ai",
+      "name": "Microsoft Learn AI",
+      "url": "https://learn.microsoft.com/training/browse/?products=ai-services",
+      "category": "learn",
+      "description": "带动手实验的官方学习路径！考 Azure AI 认证就看这里",
+      "region": "overseas",
       "apiReady": false,
-      "tags": ["模型库", "开源项目", "机器之心", "研究向"]
+      "tags": ["学习路径", "微软", "认证", "动手实验"]
     },
     {
-      "slug": "hao360-ai",
-      "name": "360 AI 导航",
-      "url": "https://ai.hao.360.com/",
-      "category": "nav",
-      "description": "360 官方 AI 导航！国内主流产品一网打尽，配资讯流",
-      "region": "cn",
+      "slug": "d2l",
+      "name": "动手学深度学习",
+      "url": "https://zh.d2l.ai/",
+      "category": "learn",
+      "description": "中文深度学习教材天花板！每章都有能跑的代码，完全免费",
+      "region": "china",
       "apiReady": false,
-      "tags": ["工具导航", "官方出品", "国内产品", "AI 资讯"]
+      "tags": ["深度学习", "中文教材", "代码", "免费"]
+    },
+    {
+      "slug": "openai-cookbook",
+      "name": "OpenAI Cookbook",
+      "url": "https://developers.openai.com/cookbook",
+      "category": "learn",
+      "description": "照着抄就能用的官方示例！RAG、函数调用、评测都有现成代码",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["示例代码", "OpenAI", "RAG", "最佳实践"]
+    },
+    {
+      "slug": "anthropic-learn",
+      "name": "Claude Academy",
+      "url": "https://academy.claude.com/",
+      "category": "learn",
+      "description": "Claude 官方学院！原 Anthropic Learn，提示词与 Agent 课程最权威",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["课程", "Claude", "提示工程", "Agent"]
+    },
+    {
+      "slug": "gptzero",
+      "name": "GPTZero",
+      "url": "https://gptzero.me/",
+      "category": "detect",
+      "description": "最出名的 AI 文本检测！逐句标出可疑段落，老师用得最多",
+      "region": "overseas",
+      "apiReady": true,
+      "tags": ["AI 检测", "论文", "逐句分析", "教育"]
+    },
+    {
+      "slug": "originality-ai",
+      "name": "Originality.AI",
+      "url": "https://originality.ai/",
+      "category": "detect",
+      "description": "给内容团队做的检测！AI 率加查重一起出，还能看编辑过程",
+      "region": "overseas",
+      "apiReady": true,
+      "tags": ["AI 检测", "查重", "内容审核", "API"]
+    },
+    {
+      "slug": "copyleaks",
+      "name": "Copyleaks",
+      "url": "https://copyleaks.com/",
+      "category": "detect",
+      "description": "支持三十多种语言的查重！AI 检测误判率控制得比较稳",
+      "region": "overseas",
+      "apiReady": true,
+      "tags": ["查重", "AI 检测", "多语言", "企业"]
+    },
+    {
+      "slug": "turnitin",
+      "name": "Turnitin",
+      "url": "https://www.turnitin.com/",
+      "category": "detect",
+      "description": "高校论文查重的行业标准！现在也带 AI 写作识别",
+      "region": "overseas",
+      "apiReady": false,
+      "tags": ["论文查重", "高校", "AI 检测", "学术"]
+    },
+    {
+      "slug": "zhuque-detect",
+      "name": "腾讯朱雀 AI 检测",
+      "url": "https://matrix.tencent.com/ai-detect/",
+      "category": "detect",
+      "description": "免费的中文 AI 检测！文本和图片都能测，腾讯官方出品",
+      "region": "china",
+      "apiReady": false,
+      "tags": ["AI 检测", "中文", "图片鉴伪", "免费"]
     }
   ]
 }
