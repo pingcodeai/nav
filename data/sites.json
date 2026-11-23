@@ -222,7 +222,7 @@
     {
       "slug": "windsurf",
       "name": "Devin Desktop",
-      "url": "https://devin.ai/",
+      "url": "https://devin.ai/desktop",
       "category": "coding",
       "description": "原 Windsurf 改名而来！在 IDE 里统一指挥本地与云端 Devin 智能体",
       "region": "overseas",
@@ -991,13 +991,13 @@
     },
     {
       "slug": "magnific",
-      "name": "Magnific AI",
-      "url": "https://magnific.ai/",
+      "name": "Magnific",
+      "url": "https://www.magnific.com/",
       "category": "image",
-      "description": "效果最猛的放大工具！低清图放大还能补出细节纹理",
+      "description": "原 Freepik 整体更名！一份订阅用遍各家模型，生图放大素材一条龙",
       "region": "overseas",
-      "apiReady": false,
-      "tags": ["图像放大", "超分辨率", "细节增强", "Freepik"]
+      "apiReady": true,
+      "tags": ["原 Freepik", "图像放大", "模型聚合", "素材库"]
     },
     {
       "slug": "flux",
@@ -1018,16 +1018,6 @@
       "region": "overseas",
       "apiReady": true,
       "tags": ["实时生成", "模型聚合", "图像编辑", "放大"]
-    },
-    {
-      "slug": "freepik",
-      "name": "Freepik AI",
-      "url": "https://www.freepik.com/ai/image-generator",
-      "category": "image",
-      "description": "一份订阅用遍各家模型！素材库加生图加放大一条龙",
-      "region": "overseas",
-      "apiReady": true,
-      "tags": ["模型聚合", "素材库", "文生图", "性价比"]
     },
     {
       "slug": "whee",
@@ -1554,10 +1544,10 @@
       "name": "Grammarly",
       "url": "https://www.grammarly.com/",
       "category": "writing",
-      "description": "写英文必装！语法、语气、全文改写一条龙，浏览器里就能用",
+      "description": "写英文必装！语法、语气、全文改写一条龙，现属 Superhuman 旗下",
       "region": "overseas",
       "apiReady": false,
-      "tags": ["英文写作", "语法检查", "改写", "浏览器插件"]
+      "tags": ["英文写作", "语法检查", "改写", "Superhuman"]
     },
     {
       "slug": "immersive-translate",
@@ -1651,13 +1641,13 @@
     },
     {
       "slug": "notebooklm",
-      "name": "NotebookLM",
+      "name": "Gemini Notebook",
       "url": "https://notebook.google.com/",
       "category": "office",
-      "description": "读资料神器！传文档就能问答，还能生成两人播客音频",
+      "description": "原 NotebookLM！传文档就能问答，还能生成两人播客音频",
       "region": "overseas",
       "apiReady": false,
-      "tags": ["Google", "文档问答", "资料研读", "播客", "免费"]
+      "tags": ["Google", "原 NotebookLM", "文档问答", "播客", "免费"]
     },
     {
       "slug": "microsoft-copilot",
